@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --background: #0d0d0e;
+  --container-background: #111116;
+  --content-background: #1f1f2a;
+  --content: #6b6bfe;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--content);
+}
+
+label {
+  margin-left: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 540px;
+  height: 270px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: var(--container-background);
+}
+
+.password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  width: 98%;
+  height: 60px;
+  border: 2px solid var(--content-background);
+}
+
+.password-container p {
+  font-size: 2rem;
+  color: var(--content);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 98%;
+  top: 16px;
+}
+
+.buttons button {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--content-background);
+  padding: 10px;
+  width: 45%;
+  border-radius: 10px;
+  color: #efefef;
+}
+
+.buttons button:hover {
+  background-color: var(--content);
+}
+
+.checkbox-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 50px;
+  width: 96%;
+  gap: 40px;
+  color: #efefef;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.length {
+  display: flex;
+  position: relative;
+  top: 80px;
+  gap: 10px;
+  color: #efefef;
+}
+
+.copy-notification {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 360px;
+  transform: fade;
+}
+
+.copy-notification p {
+  background: var(--content);
+  color: #efefef;
+  padding: 10px 40px;
+  border-radius: 12px;
+}

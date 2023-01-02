@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container center-items">
+      <div class="password-container center-items">
+        <p id="password-label"></p>
+      </div>
+      <div class="buttons">
+        <button onclick="copyToClipboard()">
+          <image src="./assets/clipboard.svg" alt="Clipboard Icon"></image>
+          <p>Copy To Clipboard</p>
+        </button>
+        <button onclick="generatePassword()">
+          <image src="./assets/regenerate.svg" alt="Regenerate Icon"></image>
+          <p>Regenerate Password</p>
+        </button>
+      </div>
+
+      <div class="checkbox-container" id="checkbox-container">
+        <div class="checkbox">
+          <input type="checkbox" data-number="0" name="uppercase" checked onclick="handleCheckboxClick(this);" />
+          <label for="uppercase">A-Z</label>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" data-number="1" name="lowercase" checked onclick="handleCheckboxClick(this);" />
+          <label for="lowercase">a-z</label>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" data-number="2" name="figures" checked onclick="handleCheckboxClick(this);" />
+          <label for="figures">0-9</label>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" data-number="3" name="special" onclick="handleCheckboxClick(this);" />
+          <label for="special">!@#$%^&*</label>
+        </div>
+      </div>
+
+      <div class="length">
+        <p>Length (min 4 / max 32):</p>
+        <input type="number" min="4" max="32" value="8" id="length" />
+      </div>
+    </div>
+
+    <div class="copy-notification" id="notification">
+      <p>Copied!</p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
